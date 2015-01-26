@@ -9,7 +9,6 @@ Version: '1.0'
 Categories:
   - service
   - java
-  - web_framework
 Provides:
   - rezsystem-1.0
   - "rezststem"
