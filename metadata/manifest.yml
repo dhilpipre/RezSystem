@@ -1,0 +1,37 @@
+Name: RezSystem
+Cartridge-Short-Name: RezSystem
+Cartridge-Version: '1.0'
+Compatible-Versions:
+  - '1.0'
+Display-Name: RezSystem 1.0
+Version: '1.0'
+Categories:
+  - service
+  - java
+  - web_framework
+Provides:
+  - rezsystem-1.0
+  - "rezststem"
+Subscribes:
+  set-db-connection-info:
+    Type: "NET_TCP:db:connection-info"
+    Required: false
+  set-mysql-connection-info:
+    Type: "NET_TCP:db:mysql"
+    Required : true
+Scaling:
+  Min: 1
+  Max: 1
+Group-Overrides:
+  - components:
+    - rezsystem-1.0
+Endpoints:
+  - Private-IP-Name:   IP
+    Private-Port-Name: REZ_PORT
+    Private-Port:      6500
+    Public-Port-Name:  PROXY_REZ_PORT
+    Mappings:
+      - Frontend:      "/front"
+        Backend:       "/back"
+Additional-Control-Actions:
+  - threaddump
