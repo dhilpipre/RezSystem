@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<extension xmlns="https://newrelic.com/docs/java/xsd/v1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="newrelic-extension extension.xsd " name="reservations-ext"
+	version="1.0" enabled="true">
+	<instrumentation metricPrefix="rezAgent">
+
+		<!-- This point cut instruments some of the methods in the class com.sample.SampleArrayList. -->
+		<pointcut transactionStartPoint="true" transactionType="background"
+			excludeFromTransactionTrace="false" ignoreTransaction="false">
+			<className includeSubclasses="true">com.newrelic.airline.reservations.processing.BaseAgent</className>
+			<!-- Instruments the method clear() -->
+			<method>
+				<name>run</name>
+				<parameters />
+			</method>
+		</pointcut>
+
+		<!-- This point cut instruments some of the methods in the class com.sample.SampleArrayList. -->
+		<pointcut transactionStartPoint="true" transactionType="background"
+			excludeFromTransactionTrace="false" ignoreTransaction="false">
+			<interfaceName>com.newrelic.airline.reservations.ReservationController</interfaceName>
+			<!-- Instruments the method clear() -->
+			<method>
+				<name>findReservationByConf</name>
+			</method>
+			<method>
+				<name>createReservation</name>
+			</method>
+			<method>
+				<name>findReservationsByName</name>
+			</method>
+						<method>
+				<name>getCitiesServed</name>
+			</method>
+						<method>
+				<name>findFlights</name>
+			</method>
+			<method>
+				<name>findAllReservations</name>
+			</method>
+			<method>
+				<name>cancelReservation</name>
+			</method>
+										
+		</pointcut>
+
+	</instrumentation>
+</extension>

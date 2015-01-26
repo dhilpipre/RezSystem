@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+PATH=/bin:/usr/bin:$PATH
+source $OPENSHIFT_CARTRIDGE_SDK_BASH
+
+if [ "$(ls ${OPENSHIFT_REPO_DIR}/NewRelicAirlinesRezSystem-DB 2>/dev/null)" ]: then
+   rsync -rS --delete ${OPENSHIFT_REPO_DIR}/NewRelicAirlinesRezSystem-DB ${OPENSHIFT_REZSYSTEM.DIR/NewRelicRezSystem-DB/
+fi

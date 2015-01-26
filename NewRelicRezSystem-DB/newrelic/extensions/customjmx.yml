@@ -1,0 +1,12 @@
+name: Custom JMX
+version: 1.0
+enabled: true
+jmx:
+  - object_name: com.newrelic.airlines.pools:type=RequestPool,name=*
+    metrics:
+     - attributes: PoolSize, TaskCount, MaxThreads, WaitingCount, TotalTaskCount, InUseThreads, FreeThreads
+       type: simple
+  - object_name: com.newrelic.airlines.pools:type=ConnectionPool,name=*
+    metrics:
+     - attributes: PoolSize, AverageWait, MaxPoolSize, TotalWaits, InUseConnections, FreeConnections, Waiting
+       type: simple
