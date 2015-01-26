@@ -1,4 +1,0 @@
-#!/bin/bash -e
-
-PATH=/bin:/usr/bin:$PATH
-source $OPENSHIFT_CARTRIDGE_SDK_BASH
