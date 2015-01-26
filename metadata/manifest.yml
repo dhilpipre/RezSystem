@@ -1,6 +1,7 @@
 Name: RezSystem
 Cartridge-Short-Name: RezSystem
 Cartridge-Version: '1.0'
+Cartridge-Vendor: 'New Relic'
 Compatible-Versions:
   - '1.0'
 Display-Name: RezSystem 1.0
