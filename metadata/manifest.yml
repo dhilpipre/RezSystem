@@ -36,4 +36,4 @@ Endpoints:
         Backend:       "/back"
 Additional-Control-Actions:
   - threaddump
-Source-Url: git@github.com:dhilpipre/RezSystem.git
+Source-Url: https://github.com/dhilpipre/RezSystem.git
